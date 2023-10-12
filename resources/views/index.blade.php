@@ -43,7 +43,7 @@
                                     <td>{{ $member->first_name . ' ' . $member->last_name }}</td>
                                     <td style="border: 1px solid #ddd;">{{ $member->gender }}</td>
                                     <td style="border: 1px solid #ddd;">{{ $member->registration_date }}</td>
-                                    <td style="border: 1px solid #ddd;">{{ $member->method }}</td>
+                                    <td style="border: 1px solid #ddd; color:green;"><b>{{ $member->method }}</b></td>
                                     <td style="border: 1px solid #ddd;">{{ $member->phone_number }}</td>
                                     <td style="border: 1px solid #ddd;">{{ $member->email }}</td>
                                 </tr>

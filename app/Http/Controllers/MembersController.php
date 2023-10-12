@@ -10,7 +10,7 @@ class MembersController extends Controller
     public function index()
     {
         // Retrieve all records from the "members" table
-        $members = DB::table('members')->paginate(20);
+        $members = DB::table('members')->paginate(10);
 
         // Pass the retrieved data to the 'index' view
         return view('index', compact('members'));

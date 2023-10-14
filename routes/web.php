@@ -13,9 +13,8 @@ Route::get('/send-sms', [SmsLogController::class, 'sendSms']);
 
 
 
-
 Route::middleware(['auth'])->group(function () {
-    Route::get('/members', [MembersController::class, 'index'])->name('index');
+    Route::resource('/members', MembersController::class);
 });
 
 

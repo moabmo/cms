@@ -4,6 +4,41 @@
             {{ __('Church Management System') }}
         </h2>
     </x-slot>
+    
+    <h1>Add Members</h1>
+    <form method="POST" action="{{ route('members.store') }}" >
+        @csrf
+
+        <div>
+                <input type="text" name="first_name" placeholder="First Name" required>
+           
+
+            
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                
+           
+                <input type="text" name="gender" class="form-control" placeholder="Gender" required>
+            
+                <input type="date" name="registration_date" class="form-control" required>
+            
+            
+                <input type="text" name="method" class="form-control" placeholder="Method" required>
+            
+           
+                <input type="text" name="phone_number" class="form-control" placeholder=" Phone Number" required>
+            
+
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+        
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+          
+    </form>
+<script>
+    @if(session('success'))
+            alert("{{ session('success') }}");
+        @endif
+</script>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -22,6 +57,7 @@
                     </form> -->
 
                     <h1>Members List</h1>
+                    <h2>This is the list of all the members we have</h2>
 
                     <table style="border-collapse: collapse; width: 100%; text-align: left;">
                         <thead>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; // Import the DB facade
+use App\Models\Member;
 
 class MembersController extends Controller
 {
@@ -33,4 +34,28 @@ class MembersController extends Controller
         // Return a view with the search results
         return view('index', compact('searchResults'));
     }
+      public function create()
+        {
+            return view('members.create');
+        }
+    
+        public function store(Request $request)
+        {
+            // Validate the form data
+            $request->validate([
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'gender' => 'required',
+                'registration_date' => 'required|date',
+                'method' => 'required',
+                'phone_number' => 'required',
+                'email' => 'required|email',
+            ]);
+    
+            // Create a new member record in the database
+            Member::create($request->all());
+    
+            // Redirect back to the index page with a success message
+            return redirect()->route('members.index')->with('success', 'Member added successfully!');
+        }
 }

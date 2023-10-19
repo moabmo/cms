@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
+</head>
+<body>
+<div class="firstsection">
+<div class="navbar">
+    <a href="{{ url('/') }}">Home</a>
+    <a href="{{ url('/about-us') }}">About Us</a>
+    <a href="{{ url('/worship-service') }}">Worship Services</a>
+    <a href="{{ url('/ministry') }}">Ministries</a>
+    <a href="{{ url('/events') }}">Events</a>
+    <a href="{{ url('/contact-us') }}">Contact Us</a>
+    <a href="{{ url('/members') }}">Members</a>
+</div>
+@yield('content')
 
-        <title>{{ config('app.name', 'CMS') }}</title>
+</div>
+<div class="footer">
+©️ CMS|All rights reserved
+</div>
+<div class="secondsetion">
+    <div class="image-container">
+        <img src="{{ asset('images/sda.png') }}" alt="sda.jpg" class="fit-image">
+    </div>
+</div>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body>
+            
+</body>
 </html>

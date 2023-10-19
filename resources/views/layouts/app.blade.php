@@ -11,14 +11,44 @@
 <body>
 <div class="firstsection">
 <div class="navbar">
-    <a href="{{ url('/') }}">Home</a>
-    <a href="{{ url('/about-us') }}">About Us</a>
-    <a href="{{ url('/worship-service') }}">Worship Services</a>
-    <a href="{{ url('/ministry') }}">Ministries</a>
-    <a href="{{ url('/events') }}">Events</a>
-    <a href="{{ url('/contact-us') }}">Contact Us</a>
-    <a href="{{ url('/members') }}">Members</a>
+<div class="logo">
+<a href="{{ url('/') }}">
+    <img src="{{ asset('images/header.png') }}" alt="Logo">
+</a>
 </div>
+            <div class="links">
+                <a href="{{ url('/about-us') }}">About Us</a>
+                <a href="{{ url('/worship-service') }}">Worship Services</a>
+                <a href="{{ url('/ministry') }}">Ministries</a>
+                <a href="{{ url('/events') }}">Events</a>
+                <a href="{{ url('/contact-us') }}">Contact Us</a>
+                <a href="{{ url('/members') }}">Members</a>
+            </div>
+</div>
+<script>
+    // Get the navbar element
+const navbar = document.querySelector('.navbar');
+
+// Get the offset position of the navbar
+const sticky = navbar.offsetTop;
+
+// Function to handle scroll event
+function handleScroll() {
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
+}
+
+// Attach scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+</script>
+
+
+
+
 @yield('content')
 
 </div>

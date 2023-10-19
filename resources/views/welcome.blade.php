@@ -1,22 +1,136 @@
 @extends('layouts/app')
 
 @section('content')
-    <h1>Welcome to our Church Website</h1>
-    <p>Your content goes here.</p>
-    @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="{{ asset('images/church001.jpeg') }}" alt="church image" class="fit-image">
+    </div>
+    <div class="mySlides">
+        <img src="{{ asset('images/church002.png') }}" alt="church image" class="fit-image">
+    </div>
+    <div class="mySlides">
+        <img src="{{ asset('images/church003.jpg') }}" alt="church image" class="fit-image">
+    </div>
+    <div class="mySlides">
+        <img src="{{ asset('images/church004.png') }}" alt="church image" class="fit-image">
+    </div>
+    <div class="mySlides">
+        <img src="{{ asset('images/church005.jpg') }}" alt="church image" class="fit-image">
+    </div>
+    <!-- Add more slides as needed -->
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-            <a href="{{ __('Log Out') }}">Logout</a>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    let slideIndex = 1;
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+// Automatic slideshow
+setInterval(function () {
+    plusSlides(1); // Go to the next slide
+}, 5000); // Change slide every 5 seconds (5000 milliseconds)
+
+</script>
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <h2>Card Title</h2>
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+            This is some information about the topic you want to display in the card.
+        </div>
+    </div>
+    </div>
 
             
 @endsection

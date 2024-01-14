@@ -1,0 +1,11 @@
+.service{
+    background-image: linear-gradient(to right, #22534f, #22534f, #22534f, #F0B323, #003b5c, #003b5c, #003b5c);
+    color:rgb(255, 255, 255);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bolder;
+    margin: 1%;
+}

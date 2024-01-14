@@ -21,8 +21,9 @@
                 <a href="{{ url('/worship-service') }}">Worship Services</a>
                 <a href="{{ url('/ministry') }}">Ministries</a>
                 <a href="{{ url('/events') }}">Events</a>
-                <a href="{{ url('/contact-us') }}">Contact Us</a>
+                <a href="{{ url('/leadership') }}">Leadership</a>
                 <a href="{{ url('/members') }}">Members</a>
+                <a href="{{ url('/contact-us') }}">Contact Us</a>
             </div>
 </div>
 <script>

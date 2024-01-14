@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 15%;
+    height: 15%;
+    background-color: white;
+    margin: 0.5%; /* Add margin as needed */
+    position: relative;
+    border-radius: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust as needed */
+}
+
+.image-caption {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 59, 92, 0.8); /* Use rgba for background color with opacity */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #008cff;
+    border-radius: 10px;
+    padding: 0px;
+    z-index: 1;
+    width: 60%;
+}
+
+.popup-image {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.popup-description {
+    height: 30%;
+    color: white;
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

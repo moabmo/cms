@@ -1,13 +1,46 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leadership</title>
+    <link rel="stylesheet" href="{{ asset('css/worship-service.css') }}">
+    
+</head>
+<body>
+
+
 @extends('layouts.app')
 
-@section('title', 'Worship Service')
+@section('title', 'Ministry')
 
 @section('content')
-  <p>
-  Service Times: Join us for our Sabbath worship services every Saturday at [insert time]. We gather to praise, pray, and study God's Word together.
-Live Streaming: Can't make it to the church in person? Watch our services online through our live streaming platform [insert link].
-Sermon Archive: Catch up on past sermons and messages by visiting our sermon archive [insert link].
+  <p>Worship Services<p> 
+  <div class="service">
+      Saturday(08:15-18:00) - Sabbath
+  </div>
+  <div class="service">
+      Saturday(08:15-18:00) - Sabbath
+  </div>
+  <div class="service">
+      Saturday(08:15-18:00) - Sabbath
+  </div>
+  <div class="service">
+      Saturday(08:15-18:00) - Sabbath
+  </div>
+  <div class="service">
+      Saturday(08:15-18:00) - Sabbath
+  </div>
 
-  </p>
+
+
+ 
 @endsection
+
+
+            
+</body>
+</html>

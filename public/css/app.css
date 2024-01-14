@@ -20,6 +20,20 @@ body {
 .secondsetion {
     width: 7vw;
     height: 100vh;
+    background: #266183;
+    flex-shrink: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /* Add any other styles specific to the second section */
+}
+
+/* Second Section Styles hover*/
+.secondsetion:hover {
+    width: 7vw;
+    height: 100vh;
     background: #003b5c;
     flex-shrink: 0;
     position: fixed;

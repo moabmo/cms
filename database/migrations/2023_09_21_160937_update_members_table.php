@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('member_number')->unique(); // Unique member_number
             $table->string('first_name');
             $table->string('last_name');
-            $table->enum('Gender', ['Male', 'Female', 'Other']);
-            $table->date('Registration_date');
+            $table->enum('gender', ['Male', 'Female', 'Other']);
+            $table->date('registration_date');
             $table->enum('method', ['transfer', 'baptism']);
             $table->string('phone_number');
             $table->string('email')->unique();

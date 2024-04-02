@@ -13,6 +13,7 @@ Route::get('/ministry', function () {return view('ministry');})->name('ministry'
 Route::get('/events', function () {return view('events');})->name('events');
 Route::get('/worship-service', function() {return view('worship-service');})->name('worship-service');
 Route::get('/leadership', function () {return view('leadership');})->name('leadership');
+Route::get('/giving',function () {return view('giving');})->name('giving');
 
 
 

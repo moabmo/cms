@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    background: #B0AEAE;
+    background: whitesmoke;
     margin: 0;
     padding: 0;
     color: #003b5c;
@@ -8,9 +8,9 @@ body {
 
 /* First Section Styles */
 .firstsection {
-    width: 93vw;
+    width: 90%;
     min-height: 50vw;
-    background: #D9D9D9;
+    background: whitesmoke;
     border-radius: 10px;
     flex-shrink: 0;
     /* Add any other styles specific to the first section */
@@ -18,7 +18,7 @@ body {
 
 /* Second Section Styles */
 .secondsetion {
-    width: 7vw;
+    width: 10%;
     height: 100vh;
     background: #266183;
     flex-shrink: 0;
@@ -32,7 +32,7 @@ body {
 
 /* Second Section Styles hover*/
 .secondsetion:hover {
-    width: 7vw;
+    width: 10%;
     height: 100vh;
     background: #003b5c;
     flex-shrink: 0;
@@ -62,7 +62,7 @@ body {
 .navbar.fixed {
     position: fixed;
     top: 0;
-    width: 93%;
+    width: 90%;
     z-index: 1000;
     background: #B0AEAE; /* Background color when fixed */
     border-bottom-color: #F0B323; /* Border color when fixed */
@@ -70,8 +70,8 @@ body {
 
 /* Logo Styles */
 .logo img {
-    height: 90px;
-    margin-left: 50%;
+    height: 5vw;
+    margin-left: 10%;
 }
 
 /* Navbar Links Styles */
@@ -79,19 +79,21 @@ body {
     display: flex;
     align-items: center;
 }
-
 .links a {
     color: #003b5c;
+    font-size: 1vw;
     text-decoration: none;
-    font-family: Advent Pro;
-    font-size: 1.2rem;
-    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
-.links a:hover {
-    color: #F0B323;
+.links a:hover{
+    font-weight: bolder;
+}
+.links a.active {
+    font-weight: bolder;
+    color: rgb(0, 143, 45);
 }
 
 /* Slideshow container */
@@ -141,8 +143,6 @@ body {
 
 /* Additional Styles */
 p {
-    width: 93vw;
-    flex-shrink: 0;
     text-align: justify;
     font-family: Aclonica;
     font-size: 14px;
@@ -192,39 +192,77 @@ button {
     clear: both;
     margin: auto;
 }
-
 .card {
-    width: 99%;
-    height: auto;
-    background-color: #e9e7e7;
+    width: 98%;
     border-radius: 10px;
-    box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-    margin: 20px 20px 0 0; /* Responsive margin */
-    color: #555555;
-    box-sizing: border-box;
-    float: left;
-}
+    margin: auto;
+    /* overflow: hidden; */
+    background-color: white;
+    box-shadow:  2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
 
-.card-content {
-    padding: 1%;
-}
+  .card:hover {
+    width: 98%;
+    border-radius: 10px;
+    margin: auto;
+    /* overflow: hidden; */
+    background-color: rgb(206, 206, 206);
+    box-shadow:  2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-text {
+    margin-bottom: 1rem;
+  }
+
 
 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #003b5c;
 }
 
 .footer {
-    clear: both; /* Clear the floated elements above the footer */
+    clear: both;
     color: #F0B323;
     font-family: Advent Pro;
-    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    height: 3vw;
     text-align: center;
-    width: 100%;
+    width: 95%;
+    height: auto;
     background: #003b5c;
-    margin-top: 20px; /* Add margin to create space between the cards and footer */
+    margin-top: 20px;
+    display: flex;
+    align-items: stretch;
+    padding: 2.5%;
+    color: white;
+    gap: 20px; /* Add gap between footer sections */
+}
+
+.footer-section {
+    flex: 6; /* Make this section grow to fill available space */
+    align-items: stretch; /* Ensure content stretches vertically */
+    margin-right: 10px; /* Add margin between sections */
+}
+
+.footer-section-bigger {
+    flex: 4; /* Make this section twice as wide as the other section */
+    align-items: stretch; /* Ensure content stretches vertically */
+    margin-left: 10px; /* Add margin between sections */
+}
+
+.footer a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

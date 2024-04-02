@@ -1,0 +1,17 @@
+/* Ministry Styles */
+.ministry {
+    margin-bottom: 20px;
+}
+
+.ministry h2 {
+    color: #003b5c;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ministry p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
